@@ -4,7 +4,7 @@
 class Processor
 {
     public string Merk { get; set; }
-    private string Tipe { get; set; }
+    public string Tipe { get; set; }
 
     public Processor(string merk, string tipe)
     {
@@ -111,10 +111,10 @@ class AMDVGA : Vga
 // Class Laptop
 class Laptop
 {
-    private string merk;
-    private string tipe;
-    private Vga vga;
-    private Processor processor;
+    public string merk;
+    public string tipe;
+    public Vga vga;
+    public Processor processor;
 
     public Laptop(string merk, string tipe, Vga vga, Processor processor)
     {
