@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 // Class Processor
 class Processor
@@ -18,10 +18,6 @@ class Intel : Processor
 {
     public Intel(string tipe) : base("Intel", tipe)
     {
-        if (string.IsNullOrEmpty(tipe))
-        {
-            throw new ArgumentException("Tipe processor tidak boleh kosong.");
-        }
     }
 }
 
@@ -54,10 +50,6 @@ class AMD : Processor
 {
     public AMD(string tipe) : base("AMD", tipe)
     {
-        if (string.IsNullOrEmpty(tipe))
-        {
-            throw new ArgumentException("Tipe processor tidak boleh kosong.");
-        }
     }
 }
 
@@ -84,10 +76,6 @@ class Vga
 
     public Vga(string merk)
     {
-        if (string.IsNullOrEmpty(merk))
-        {
-            throw new ArgumentException("Merk VGA tidak boleh kosong.");
-        }
         this.merk = merk;
     }
 }
@@ -118,14 +106,6 @@ class Laptop
 
     public Laptop(string merk, string tipe, Vga vga, Processor processor)
     {
-        if (string.IsNullOrEmpty(merk))
-        {
-            throw new ArgumentException("Merk tidak boleh kosong", nameof(merk));
-        }
-        if (string.IsNullOrEmpty(tipe))
-        {
-            throw new ArgumentException("Tipe tidak boleh kosong", nameof(tipe));
-        }
         this.merk = merk;
         this.tipe = tipe;
         this.vga = vga;
@@ -137,14 +117,6 @@ class Laptop
         get { return merk; }
         set
         {
-            if (!string.IsNullOrEmpty(value))
-            {
-                merk = value;
-            }
-            else
-            {
-                throw new ArgumentException("Nilai Merk tidak boleh kosong.", nameof(value));
-            }
         }
     }
 
@@ -153,14 +125,6 @@ class Laptop
         get { return tipe; }
         set
         {
-            if (!string.IsNullOrEmpty(value))
-            {
-                tipe = value;
-            }
-            else
-            {
-                throw new ArgumentException("Nilai Tipe tidak boleh kosong.", nameof(value));
-            }
         }
     }
 
